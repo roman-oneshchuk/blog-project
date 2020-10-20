@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime
+
 # Create your models here.
 
 class Bloging(models.Model):
@@ -7,3 +7,6 @@ class Bloging(models.Model):
 	post_text = models.TextField()
 	post_date = models.DateTimeField()
 	post_image = models.ImageField(upload_to='bloging_images/')
+
+	def get_summary(self):
+		return self.post_text[:100]
