@@ -10,3 +10,6 @@ class Bloging(models.Model):
 
 	def get_summary(self):
 		return self.post_text[:100]
+
+	def __str__(self):
+		return self.post_title

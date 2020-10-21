@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,15 +48,15 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-lg navbar-light font-italic" style="background-color: #EDB771">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="http://127.0.0.1:8000/">Blojik</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-link" href="#">About me</a>
-      <a class="nav-link" href="#">Facebook</a>
-      <a class="nav-link" href="#">Blog</a>
+      <a class="nav-link" href="{% static 'Roman_Oneshchuk_CV.pdf' %}">About me</a>
+      <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/roman.oneshchuk">Facebook</a>
+      <a class="nav-link" href="{% url 'showblog' %}">Blog</a>
     </div>
   </div>
 </nav>
@@ -69,6 +70,9 @@
       <p>
         <a href="mailto:roman@gmail.asd" class="btn btn-primary my-2">Mail me</a>
       </p>
+
+      <img src="{% static 'trash.jpg' %}">
+
     </div>
   </section>
 
